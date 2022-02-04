@@ -2,6 +2,11 @@
   width: 100vw;
   height: 5vh;
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   align-items: center;
+  box-shadow: 0 -5px 10px #e2e2e2;
+}
+
+span {
+  padding: 5px;
 }
