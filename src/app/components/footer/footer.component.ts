@@ -8,7 +8,7 @@ import { ITask } from 'src/app/shared';
 })
 export class FooterComponent implements OnInit {
   @Input()
-  tasks: ITask[] = []; // TODO - set it based on other task information
+  tasks: ITask[] = [];
 
   constructor() {}
 

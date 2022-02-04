@@ -15,8 +15,7 @@ enum TaskFilterOptions {
   styleUrls: ['./content.component.css'],
 })
 export class ContentComponent implements OnChanges {
-  username = 'Michael Hansen'; // mock it instead of hardcording
-  pendingTasks = 1;
+  username = 'Michael Hansen'; // TODO - mock it instead of hardcording
   @Input()
   tasks: ITask[] = [];
 
@@ -28,7 +27,7 @@ export class ContentComponent implements OnChanges {
 
   constructor(public taskService: TaskService) {}
 
-  ngOnChanges(changes: SimpleChanges): void {
+  ngOnChanges(): void {
     this.filteredTasks = this.tasks;
   }
 

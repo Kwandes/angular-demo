@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { ITask, TaskStateEnum } from '..';
+import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ITask, TaskStateEnum } from '..';
 
 @Injectable({
   providedIn: 'root',
