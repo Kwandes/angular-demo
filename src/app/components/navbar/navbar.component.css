@@ -4,8 +4,13 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
 }
 
 span {
   padding: 5px;
+}
+
+#qvest-logo {
+  padding: 0 10px;
 }
