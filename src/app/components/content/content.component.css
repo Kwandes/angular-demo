@@ -3,17 +3,14 @@
   flex-direction: column;
   min-width: 500px;
   width: 80%;
-  border: 1px purple solid;
 }
 
 #user-info {
-  border: 1px blue solid;
   padding: 10px;
 }
 
 #tasks-wrapper {
   display: flex;
-  border: 1px green solid;
   flex-direction: column;
   margin: 1vh 1vw;
 }
@@ -22,20 +19,12 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px yellow solid;
   padding: 10px;
 }
 
 #tasks {
   display: flex;
+  flex-direction: row;
   align-items: center;
   min-height: 300px;
-  border: 1px red solid;
-}
-
-.question {
-  border: 1px brown solid;
-  margin: 10px;
-  min-width: 200px;
-  min-height: 200px;
 }
