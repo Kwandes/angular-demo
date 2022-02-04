@@ -25,7 +25,15 @@
 #tasks {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   min-height: 300px;
+}
+
+.filterTasksSelect {
+  border: none;
+}
+
+.filterTasksOption:checked {
+  color: #f4bf6c;
 }

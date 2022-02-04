@@ -4,9 +4,18 @@
 <div id="tasks-wrapper">
   <nav id="info-nav">
     <span>Tasks ({{ pendingTasks }})</span>
-    <div>selection</div>
+    <div>
+      <span>Showing: </span>
+      <form></form>
+      <select class="filterTasksSelect" formControlName="filterTasksForm" (change)="filterTasks($event)">
+        <option class="filterTasksOption" value="ALL_TASKS">All ({{ filterTasksBy('ALL_TASKS').length }})</option>
+        <option class="filterTasksOption" value="LOCKED">Locked ({{ filterTasksBy('LOCKED').length }})</option>
+        <option class="filterTasksOption" value="PENDING">pending ({{ filterTasksBy('PENDING').length }})</option>
+        <option class="filterTasksOption" value="COMPLETED">Completed ({{ filterTasksBy('COMPLETED').length }})</option>
+      </select>
+    </div>
   </nav>
   <div id="tasks">
-    <app-task *ngFor="let task of tasks" [task]="task"></app-task>
+    <app-task *ngFor="let task of filteredTasks" [task]="task"></app-task>
   </div>
 </div>
