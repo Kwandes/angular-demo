@@ -1,7 +1,11 @@
 :host {
+  width: 100vw;
+  height: 5vh;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 100vh;
+}
+
+span {
+  padding: 5px;
 }
