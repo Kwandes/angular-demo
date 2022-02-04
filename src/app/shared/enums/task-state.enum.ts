@@ -1,6 +1,7 @@
 export enum TaskStateEnum {
-  ANSWER,
-  ANSWERED,
-  ASK,
-  LOCKED,
+  ANSWER = 'ANSWER',
+  ANSWERED = 'ANSWERED',
+  ASK = 'ASK',
+  ASKED = 'ASKED',
+  LOCKED = 'LOCKED',
 }

@@ -1,10 +1,28 @@
 :host {
   color: #f2eee1;
-  border: 1px brown solid;
   background-color: #3d4641;
   box-shadow: 10px 10px 24px 0px #3d464026;
   border-radius: 6px;
   margin: 10px;
   min-width: 200px;
   min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#picture {
+  margin: 10px;
+  min-width: 65px;
+  min-height: 65%;
+  width: 19%;
+  height: 19%;
+}
+
+#action {
+  margin: 0 20px;
+}
+
+#task-info{
+
 }
