@@ -3,15 +3,15 @@
 </div>
 <div id="tasks-wrapper">
   <nav id="info-nav">
-    <span>Tasks ({{ pendingTasks }})</span>
+    <span>Tasks ({{ filteredTasks.length }})</span>
     <div>
       <span>Showing: </span>
       <form></form>
       <select class="filterTasksSelect" formControlName="filterTasksForm" (change)="filterTasks($event)">
-        <option class="filterTasksOption" value="ALL_TASKS">All ({{ filterTasksBy('ALL_TASKS').length }})</option>
-        <option class="filterTasksOption" value="LOCKED">Locked ({{ filterTasksBy('LOCKED').length }})</option>
-        <option class="filterTasksOption" value="PENDING">pending ({{ filterTasksBy('PENDING').length }})</option>
-        <option class="filterTasksOption" value="COMPLETED">Completed ({{ filterTasksBy('COMPLETED').length }})</option>
+        <option class="filterTasksOption" value="ALL_TASKS">All ({{ taskService.filterTasksBy('ALL_TASKS', tasks).length }})</option>
+        <option class="filterTasksOption" value="LOCKED">Locked ({{ taskService.filterTasksBy('LOCKED', tasks).length }})</option>
+        <option class="filterTasksOption" value="PENDING">pending ({{ taskService.filterTasksBy('PENDING', tasks).length }})</option>
+        <option class="filterTasksOption" value="COMPLETED">Completed ({{ taskService.filterTasksBy('COMPLETED', tasks).length }})</option>
       </select>
     </div>
   </nav>

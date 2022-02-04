@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { ITask } from 'src/app/shared';
 
 @Component({
   selector: 'app-footer',
@@ -6,15 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  pendingTasks = 3; // TODO - set it based on other task information
+  @Input()
+  tasks: ITask[] = []; // TODO - set it based on other task information
 
   constructor() {}
 
   ngOnInit(): void {}
 
   getPendingTasks(): string {
-    if (this.pendingTasks === 1) return '1 pending task';
-    if (this.pendingTasks > 1) return `${this.pendingTasks} pending tasks`;
+    if (this.tasks.length === 1) return '1 pending task';
+    if (this.tasks.length > 1) return `${this.tasks.length} pending tasks`;
     return '';
   }
 }
